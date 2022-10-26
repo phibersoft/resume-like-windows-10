@@ -22,12 +22,12 @@ const PROGRAM_CONFIG: IProgramConfig = {
   projects: {
     icon: <LibraryIcon />,
     content: <Projects />,
-    width: 80,
+    width: 55,
   },
   "work history": {
     icon: <WorkIcon />,
     content: <WorkHistory />,
-    width: 75,
+    width: 65,
   },
 };
 
