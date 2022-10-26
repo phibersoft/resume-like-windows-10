@@ -1,12 +1,8 @@
 import type { NextPage } from "next";
-import {Profile} from '../components/Profile';
-import {useEffect, useLayoutEffect} from 'react';
+import { Desktop } from "../components/Desktop";
 
 const Home: NextPage = () => {
-
-  return <main>
-    <Profile />
-  </main>
+  return <Desktop />;
 };
 
 export default Home;

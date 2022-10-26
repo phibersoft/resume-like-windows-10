@@ -1,0 +1,116 @@
+$hackpanelradius: 7px;
+
+.hackpanel {
+  width: 90%;
+  background-color: #000000;
+  border-radius: $hackpanelradius;
+}
+
+.topbar {
+  position: relative;
+  background-color: white;
+  width: 100%;
+  height: 30px;
+  padding: 6px;
+  display: grid;
+  grid-template-columns: minmax(100px, 30%) minmax(100px, 70%);
+  grid-gap: 0;
+  align-items: center;
+  border-top-right-radius: $hackpanelradius;
+  border-top-left-radius: $hackpanelradius;
+
+  p {
+    font-family: Consolas, sans-serif;
+    font-size: 12px;
+    user-select: none;
+  }
+}
+
+.dots {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  &:nth-child(3) {
+    background-color: #ff0000;
+  }
+
+  &:nth-child(2) {
+    background-color: #ff9900;
+  }
+
+  &:nth-child(1) {
+    background-color: #00ff00;
+  }
+}
+
+.hacks {
+  color: white;
+  padding: 15px;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.hack {
+  display: flex;
+  margin-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter 3s steps(40, end);
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    white-space: normal;
+
+    p:nth-child(1) {
+      display: inline;
+
+      &:after {
+        content: "" !important;
+      }
+    }
+
+    p:nth-child(2), a {
+      display: block;
+    }
+
+    animation: none;
+  }
+
+  &:before {
+    content: ">";
+    margin-right: 5px;
+  }
+
+  // question
+  p:nth-child(1) {
+    &:after {
+      content: ":";
+      margin-right: 5px;
+    }
+  }
+
+  // answer
+  p:nth-child(2),
+  a {
+    color: #00ff00;
+    letter-spacing: 0.6px;
+  }
+}

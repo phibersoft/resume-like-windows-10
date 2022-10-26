@@ -8,6 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Adem UYSAL</title>
+        <meta name={"viewport"} content={"width=1024"} />
       </Head>
 
       <Component {...pageProps} />
