@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { List } from "../List";
+import { List } from "../../components/List";
 
 const Biography: FC = () => {
   return (

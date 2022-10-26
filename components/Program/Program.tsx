@@ -1,4 +1,4 @@
-import {FC, PropsWithChildren, useEffect} from "react";
+import { FC, PropsWithChildren } from "react";
 import styles from "./Program.module.scss";
 import usePrograms from "../../store";
 import { IProgram } from "../../config/program-config";

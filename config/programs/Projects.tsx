@@ -1,7 +1,7 @@
 import { FC } from "react";
-import PROJECTS_CONFIG from "../../config/project-config";
+import PROJECTS_CONFIG from "../project-config";
 import styles from "./Projects.module.scss";
-import { GithubIcon, NpmIcon } from "../SVG";
+import { GithubIcon, NpmIcon } from "../../SVG";
 
 const Projects: FC = () => {
   return (
@@ -32,7 +32,7 @@ const ProjectItem: FC<typeof PROJECTS_CONFIG[0]> = ({
         <div className={styles.link}>
           Published On:{" "}
           {npmLink && (
-            <a href={npmLink}>
+            <a href={npmLink} target={"_blank"} rel={"noopener noreferrer"}>
               <NpmIcon />
             </a>
           )}

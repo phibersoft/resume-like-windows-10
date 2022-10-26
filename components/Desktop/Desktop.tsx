@@ -27,13 +27,11 @@ const Desktop: FC = () => {
           );
         })}
       </div>
-      <div className={styles.programContainer}>
         {activeProgram && (
-          <Program title={activeProgram}>
+          <Program title={activeProgram} width={PROGRAM_CONFIG[activeProgram].width}>
             {PROGRAM_CONFIG[activeProgram].content}
           </Program>
         )}
-      </div>
       <Taskbar />
     </div>
   );

@@ -11,8 +11,8 @@ interface ProgramState {
 }
 
 const usePrograms = create<ProgramState>((set) => ({
-  currentPrograms: ["projects", "work history", "biography"],
-  activeProgram: "biography",
+  currentPrograms: [],
+  activeProgram: null,
 
   openProgram: (program: IProgram) => {
     set((state) => {

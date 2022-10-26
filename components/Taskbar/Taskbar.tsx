@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren, useEffect, useState } from "react";
 import styles from "./Taskbar.module.scss";
-import { BatteryIcon, SearchIcon, WifiIcon, WindowsTaskbarIcon } from "../SVG";
+import { BatteryIcon, SearchIcon, WifiIcon, WindowsTaskbarIcon } from "../../SVG";
 import usePrograms from "../../store";
 import ProgramConfig from "../../config/program-config";
 

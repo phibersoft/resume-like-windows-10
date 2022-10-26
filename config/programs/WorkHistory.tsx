@@ -1,5 +1,5 @@
 import { FC } from "react";
-import WORK_HISTORY_CONFIG from "../../config/work-history-config";
+import WORK_HISTORY_CONFIG from "../work-history-config";
 import styles from "./WorkHistory.module.scss";
 
 const WorkHistory: FC = () => {
