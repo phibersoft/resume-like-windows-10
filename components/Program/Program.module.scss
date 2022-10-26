@@ -3,8 +3,11 @@ $border-radius: 6px;
 .main {
   position: absolute;
   // center of the screen
+  width: 60%;
   min-width: 400px;
-  height: 60%;
+  max-width: 700px;
+  height: 100%;
+  max-height: 500px;
   background-color: black;
   top: 50%;
   left: 50%;
@@ -15,7 +18,7 @@ $border-radius: 6px;
 .content {
   padding: 10px 20px;
   overflow-y: auto;
-  height: calc(100% - 36px);
+  max-height: calc(100% - 36px);
 
   &::-webkit-scrollbar {
     width: 10px;

@@ -11,6 +11,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+   --shortcut-size: 30px;
+}
+
 main {
   display: flex;
   flex-direction: column;
