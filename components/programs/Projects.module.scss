@@ -1,0 +1,47 @@
+.item {
+  margin-bottom: 15px;
+
+  .title {
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    svg {
+      height: 24px;
+      width: 24px;
+      margin-left: 15px;
+      fill: white;
+    }
+  }
+
+  .description {
+    font-size: 0.9em;
+    color: #919191;
+    margin-bottom: 15px;
+  }
+
+  .status {
+    font-style: italic;
+    font-size: 0.6em;
+    vertical-align: middle;
+  }
+
+  .technologies {
+    span {
+      display: inline-block;
+      background-color: #6c6c6c;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      font-size: 0.9em;
+      color: #ffffff;
+    }
+  }
+}

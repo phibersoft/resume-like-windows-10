@@ -1,17 +1,30 @@
-import {
-  ConsoleIcon,
-  GalleryIcon,
-  LibraryIcon,
-  WorkIcon,
-} from "../components/SVG";
+import { ConsoleIcon, LibraryIcon, WorkIcon } from "../components/SVG";
+import { Biography, WorkHistory } from "../components/programs";
+import { Projects } from "../components/programs/Projects";
 
-export type Program = "gallery" | "biography" | "projects" | "work history";
+export type IProgram = "biography" | "projects" | "work history";
 
-const PROGRAM_CONFIG: Record<Program, JSX.Element> = {
-  gallery: <GalleryIcon />,
-  biography: <ConsoleIcon />,
-  projects: <LibraryIcon />,
-  "work history": <WorkIcon />,
+type IProgramConfig = Record<
+  IProgram,
+  {
+    icon: JSX.Element;
+    content: JSX.Element;
+  }
+>;
+
+const PROGRAM_CONFIG: IProgramConfig = {
+  biography: {
+    icon: <ConsoleIcon />,
+    content: <Biography />,
+  },
+  projects: {
+    icon: <LibraryIcon />,
+    content: <Projects />,
+  },
+  "work history": {
+    icon: <WorkIcon />,
+    content: <WorkHistory />,
+  },
 };
 
 export default PROGRAM_CONFIG;

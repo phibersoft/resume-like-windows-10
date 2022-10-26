@@ -1,10 +1,10 @@
 import { FC, PropsWithChildren, useState } from "react";
 import styles from "./Shortcut.module.scss";
 import usePrograms from "../../store";
-import type { Program } from "../../config/program-config";
+import type { IProgram } from "../../config/program-config";
 
 interface ShortcutProps {
-  name: Program;
+  name: IProgram;
 }
 
 const Shortcut: FC<PropsWithChildren<ShortcutProps>> = ({ name, children }) => {

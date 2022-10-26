@@ -1,20 +1,20 @@
 import create from "zustand";
-import type { Program } from "./config/program-config";
+import type { IProgram } from "./config/program-config";
 
 interface ProgramState {
-  currentPrograms: Program[];
-  activeProgram: Program | null;
+  currentPrograms: IProgram[];
+  activeProgram: IProgram | null;
 
-  openProgram: (program: Program) => void;
-  closeProgram: (program: Program) => void;
+  openProgram: (program: IProgram) => void;
+  closeProgram: (program: IProgram) => void;
   minimizeProgram: () => void;
 }
 
 const usePrograms = create<ProgramState>((set) => ({
-  currentPrograms: ["gallery", "projects", "work history"],
-  activeProgram: "projects",
+  currentPrograms: ["projects", "work history", "biography"],
+  activeProgram: "biography",
 
-  openProgram: (program: Program) => {
+  openProgram: (program: IProgram) => {
     set((state) => {
       // Check if program is already open
       if (state.currentPrograms.includes(program)) {
@@ -29,10 +29,10 @@ const usePrograms = create<ProgramState>((set) => ({
       }
     });
   },
-  closeProgram: (program: Program) => {
+  closeProgram: (program: IProgram) => {
     set((state) => ({
       currentPrograms: state.currentPrograms.filter((p) => p !== program),
-      activeProgram: state.currentPrograms[state.currentPrograms.length - 1],
+      activeProgram: null,
     }));
   },
   minimizeProgram: () => {
@@ -51,7 +51,7 @@ const usePrograms = create<ProgramState>((set) => ({
       return {
         activeProgram:
           state.currentPrograms[
-            state.currentPrograms.indexOf(state.activeProgram as Program) + 1
+            state.currentPrograms.indexOf(state.activeProgram as IProgram) + 1
           ],
       };
     });

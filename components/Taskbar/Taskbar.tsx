@@ -1,19 +1,6 @@
-import {
-  FC,
-  PropsWithChildren,
-  PropsWithRef,
-  useEffect,
-  useState,
-} from "react";
+import { FC, PropsWithChildren, useEffect, useState } from "react";
 import styles from "./Taskbar.module.scss";
-import {
-  BatteryIcon,
-  ConsoleIcon,
-  GalleryIcon,
-  SearchIcon,
-  WifiIcon,
-  WindowsTaskbarIcon,
-} from "../SVG";
+import { BatteryIcon, SearchIcon, WifiIcon, WindowsTaskbarIcon } from "../SVG";
 import usePrograms from "../../store";
 import ProgramConfig from "../../config/program-config";
 
@@ -52,7 +39,7 @@ const Taskbar: FC = () => {
               onClick={onClick}
               key={`taskbar-item-${program}`}
             >
-              {ProgramConfig[program]}
+              {ProgramConfig[program].icon}
             </TaskbarItem>
           );
         })}

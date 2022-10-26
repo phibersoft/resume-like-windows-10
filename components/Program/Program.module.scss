@@ -1,0 +1,77 @@
+$border-radius: 6px;
+
+.main {
+  position: absolute;
+  // center of the screen
+  width: 70%;
+  min-width: 400px;
+  max-height: 70%;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: $border-radius;
+}
+
+.content {
+  padding: 10px 20px;
+  overflow-y: auto;
+  height: 100%;
+  max-height: 400px;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    border: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+}
+
+.topbar {
+  height: 7%;
+  min-height: 25px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+
+.title {
+  text-transform: capitalize;
+  color: black;
+}
+
+.dots {
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.dot:hover {
+  background-color: #0064af;
+}
+
+.dot:nth-child(1) {
+  background-color: #fff202;
+}
+
+.dot:nth-child(2) {
+  background-color: #ff0000;
+}
