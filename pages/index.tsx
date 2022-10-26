@@ -8,8 +8,9 @@ const Home: NextPage = () => {
   useEffect(() => {
     const { outerWidth } = window;
 
-    if(outerWidth <= 500){
+    if(outerWidth <= 500) {
       document.documentElement.style.setProperty('--shortcut-size', '56px');
+      window.scrollTo(0, 1);
     }
 
     setConfigured(true);
