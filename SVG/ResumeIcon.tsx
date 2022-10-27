@@ -10,7 +10,6 @@ const ResumeIcon: FC = () => {
       y="0px"
       viewBox="0 0 60 60"
       enableBackground={"new 0 0 60 60;"}
-      fill={"#65350F"}
     >
       <g>
         <path d="M38.914,0H6.5v60h47V14.586L38.914,0z M39.5,3.414L50.086,14H39.5V3.414z M8.5,58V2h29v14h14v42H8.5z" />

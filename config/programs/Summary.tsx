@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { List } from "../../components/List";
 
-const Biography: FC = () => {
+const Summary: FC = () => {
   return (
     <div>
       <p className={"typewriter"} style={{ marginBottom: "15px" }}>
@@ -33,4 +33,4 @@ const Biography: FC = () => {
   );
 };
 
-export { Biography };
+export { Summary };

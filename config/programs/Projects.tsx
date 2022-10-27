@@ -2,6 +2,7 @@ import { FC } from "react";
 import PROJECTS_CONFIG from "../project-config";
 import styles from "./Projects.module.scss";
 import { GithubIcon, NpmIcon } from "../../SVG";
+import { TechnologyLabel } from "../../components/common";
 
 const Projects: FC = () => {
   return (
@@ -46,7 +47,12 @@ const ProjectItem: FC<typeof PROJECTS_CONFIG[0]> = ({
       <div className={styles.technologies}>
         Technologies:
         {technologies.map((tech, index) => {
-          return <span key={`project-tech-${index}-${title}`}>{tech}</span>;
+          return (
+            <TechnologyLabel
+              key={`project-tech-${index}-${title}`}
+              text={tech}
+            />
+          );
         })}
       </div>
     </div>

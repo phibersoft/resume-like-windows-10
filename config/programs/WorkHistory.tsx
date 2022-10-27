@@ -1,6 +1,7 @@
 import { FC } from "react";
 import WORK_HISTORY_CONFIG from "../work-history-config";
 import styles from "./WorkHistory.module.scss";
+import { TechnologyLabel } from "../../components/common";
 
 const WorkHistory: FC = () => {
   return (
@@ -35,7 +36,10 @@ const WorkItem: FC<typeof WORK_HISTORY_CONFIG[0]> = ({
       <div className={styles.technologies}>
         {technologies.map((tech, index) => {
           return (
-            <span key={`work-history-tech-${index}-${company}`}>{tech}</span>
+            <TechnologyLabel
+              key={`work-history-tech-${index}-${company}`}
+              text={tech}
+            />
           );
         })}
       </div>

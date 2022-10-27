@@ -1,8 +1,7 @@
 import { ConsoleIcon, LibraryIcon, WorkIcon } from "../SVG";
-import { Biography, WorkHistory } from "./programs";
-import { Projects } from "./programs/Projects";
+import { Projects, Summary, WorkHistory } from "./programs";
 
-export type IProgram = "biography" | "projects" | "work history";
+export type IProgram = "summary" | "projects" | "work history";
 
 type IProgramConfig = Record<
   IProgram,
@@ -14,9 +13,9 @@ type IProgramConfig = Record<
 >;
 
 const PROGRAM_CONFIG: IProgramConfig = {
-  biography: {
+  summary: {
     icon: <ConsoleIcon />,
-    content: <Biography />,
+    content: <Summary />,
     width: 50,
   },
   projects: {

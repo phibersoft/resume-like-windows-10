@@ -10,10 +10,30 @@ const Home: NextPage = () => {
 
     if (outerWidth <= 500) {
       document.documentElement.style.setProperty("--shortcut-size", "56px");
-      document.documentElement.style.setProperty("--program-max-size", "1000px");
+      document.documentElement.style.setProperty(
+        "--program-max-size",
+        "1000px"
+      );
     }
 
-    setConfigured(true);
+    // font ('Poppins') check
+    let tryCount = 0;
+
+    const interval = setInterval(() => {
+      if (document.fonts.check("1em Poppins")) {
+        setConfigured(true);
+        clearInterval(interval);
+        alert("font loaded");
+      }
+
+      tryCount++;
+      if (tryCount > 10) {
+        clearInterval(interval);
+        console.log(`Font load failed`);
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
   }, []);
 
   if (!configured) return null;

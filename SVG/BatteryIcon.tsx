@@ -28,7 +28,6 @@ const BatteryIcon: FC = () => {
         height="114.14"
         rx="4"
         ry="4"
-        fill={"#005CB9"}
         stroke={"#000"}
         strokeLinecap={"square"}
         strokeWidth={"32px"}
@@ -39,7 +38,6 @@ const BatteryIcon: FC = () => {
         y1="218.67"
         x2="480"
         y2="293.33"
-        fill={"none"}
         stroke={"#000"}
         strokeLinecap={"round"}
         strokeWidth={"32px"}

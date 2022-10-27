@@ -27,7 +27,7 @@ Replace the content of this files:
     ├── project-config.tsx // Enter your projects
     ├── work-history-config.tsx // Enter your work history
     ├── programs
-    │   ├── Biography.tsx // Enter your biography
+    │   ├── Summary.tsx // Enter your biography
 
     public/
     |—— adem-uysal-cv.pdf // Replace this pdf, use simple name
