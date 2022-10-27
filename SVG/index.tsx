@@ -11,3 +11,4 @@ export * from "./WifiIcon";
 export * from "./WorkIcon";
 export * from "./NpmIcon";
 export * from "./GithubIcon";
+export * from "./ResumeIcon";

@@ -14,6 +14,7 @@ const ConsoleIcon: FC = () => {
       style={{
         background: "new 0 0 378.017 378.016",
       }}
+      fill={"--shortcut-color"}
     >
       <g>
         <path

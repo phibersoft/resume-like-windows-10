@@ -6,7 +6,7 @@ $border-radius: 6px;
   width: 60%;
   min-width: 400px;
   max-width: 700px;
-  height: 100%;
+  height: auto;
   max-height: 500px;
   background-color: black;
   top: 50%;
@@ -18,7 +18,8 @@ $border-radius: 6px;
 .content {
   padding: 10px 20px;
   overflow-y: auto;
-  max-height: calc(100% - 36px);
+  height: 100%;
+  max-height: 400px;
 
   &::-webkit-scrollbar {
     width: 10px;
@@ -49,6 +50,7 @@ $border-radius: 6px;
 .title {
   text-transform: capitalize;
   color: black;
+  user-select: none;
 }
 
 .dots {
@@ -69,7 +71,7 @@ $border-radius: 6px;
 }
 
 .dot:nth-child(1) {
-  background-color: #fff202;
+  background-color: #003256;
 }
 
 .dot:nth-child(2) {

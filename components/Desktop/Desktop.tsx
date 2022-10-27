@@ -6,6 +6,7 @@ import PROGRAM_CONFIG, { IProgram } from "../../config/program-config";
 import { Shortcut } from "../Shortcut";
 import usePrograms from "../../store";
 import { Program } from "../Program";
+import { ResumeIcon } from "../../SVG";
 
 const ALL_PROGRAMS = Object.entries(ProgramConfig);
 
@@ -26,12 +27,24 @@ const Desktop: FC = () => {
             </Shortcut>
           );
         })}
+
+        <Shortcut
+          name={"Download CV"}
+          onClick={() => {
+            window.open(`/adem-uysal-cv.pdf`, "_blank");
+          }}
+        >
+          <ResumeIcon />
+        </Shortcut>
       </div>
-        {activeProgram && (
-          <Program title={activeProgram} width={PROGRAM_CONFIG[activeProgram].width}>
-            {PROGRAM_CONFIG[activeProgram].content}
-          </Program>
-        )}
+      {activeProgram && (
+        <Program
+          title={activeProgram}
+          width={PROGRAM_CONFIG[activeProgram].width}
+        >
+          {PROGRAM_CONFIG[activeProgram].content}
+        </Program>
+      )}
       <Taskbar />
     </div>
   );

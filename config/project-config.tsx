@@ -9,12 +9,20 @@ export interface IProject {
 
 const PROJECTS_CONFIG: IProject[] = [
   {
+    title: "PhOptimizer",
+    description: "Image optimizer from command line. Simple and easy to use.",
+    technologies: ["Typescript", "NodeJS", "PKG"],
+    npmLink: "https://www.npmjs.com/package/phoptimizer",
+    githubLink: "https://github.com/phibersoft/PhOptimizer",
+    status: "completed",
+  },
+  {
     title: "Remote Controller",
     description:
       "A remote controller for your computer. Control your computer with your phone.",
     technologies: ["Socket.io", "Node.js", "Kotlin", "RobotJS"],
-    githubLink: "https://github.com/phibersoft/remote-controller",
-    status: "completed",
+    githubLink: "https://github.com/phibersoft/remote-ph-android",
+    status: "development",
   },
   {
     title: "Turkish Marketplaces",
@@ -24,6 +32,13 @@ const PROJECTS_CONFIG: IProject[] = [
     npmLink: "https://www.npmjs.com/package/turkish-marketplaces",
     githubLink: "https://github.com/phibersoft/turkish-marketplaces",
     status: "completed",
+  },
+  {
+    title: "Etsy Order Scraper",
+    description:
+      "A scraper that allows you to scrape orders from Etsy without using API.",
+    status: "private",
+    technologies: ["Typescript", "Node.js", "React"],
   },
   {
     title: "VR Extension",
@@ -61,14 +76,6 @@ const PROJECTS_CONFIG: IProject[] = [
     technologies: ["Typescript", "ExpressJS", "PostgreSQL"],
     githubLink: "https://github.com/phibersoft/auther",
     status: "deprecated",
-  },
-  {
-    title: "PhOptimizer",
-    description: "Image optimizer from command line. Simple and easy to use.",
-    technologies: ["Typescript", "NodeJS", "PKG"],
-    npmLink: "https://www.npmjs.com/package/phoptimizer",
-    githubLink: "https://github.com/phibersoft/PhOptimizer",
-    status: "completed",
   },
 ];
 
