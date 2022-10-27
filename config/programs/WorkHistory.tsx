@@ -34,6 +34,7 @@ const WorkItem: FC<typeof WORK_HISTORY_CONFIG[0]> = ({
       </div>
       <p className={styles.description}>{description}</p>
       <div className={styles.technologies}>
+        Technologies:
         {technologies.map((tech, index) => {
           return (
             <TechnologyLabel
