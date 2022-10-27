@@ -16,24 +16,7 @@ const Home: NextPage = () => {
       );
     }
 
-    // font ('Poppins') check
-    let tryCount = 0;
-
-    const interval = setInterval(() => {
-      if (document.fonts.check("1em Poppins")) {
-        setConfigured(true);
-        clearInterval(interval);
-        alert("font loaded");
-      }
-
-      tryCount++;
-      if (tryCount > 10) {
-        clearInterval(interval);
-        console.log(`Font load failed`);
-      }
-    }, 100);
-
-    return () => clearInterval(interval);
+    setConfigured(true);
   }, []);
 
   if (!configured) return null;
