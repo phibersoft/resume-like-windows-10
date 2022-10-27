@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { Desktop } from "../components/Desktop";
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from "react";
 
 const Home: NextPage = () => {
   const [configured, setConfigured] = useState(false);
@@ -8,15 +8,15 @@ const Home: NextPage = () => {
   useEffect(() => {
     const { outerWidth } = window;
 
-    if(outerWidth <= 500) {
-      document.documentElement.style.setProperty('--shortcut-size', '56px');
-      window.scrollTo(0, 1);
+    if (outerWidth <= 500) {
+      document.documentElement.style.setProperty("--shortcut-size", "56px");
+      document.documentElement.style.setProperty("--program-max-size", "1000px");
     }
 
     setConfigured(true);
   }, []);
 
-  if(!configured) return null;
+  if (!configured) return null;
   return <Desktop />;
 };
 
