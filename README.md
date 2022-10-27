@@ -57,7 +57,10 @@ Star this repository if you like it. <br />
 
 ### Contributing
 
-Pull requests are welcome.
+Pull requests are welcome. The only test your code has to pass is if the scores are still 100 :).
+
+#### Only Test
+![Lighthouse Scores](/public/lighthouse.png)
 
 ### Roadmap
 
