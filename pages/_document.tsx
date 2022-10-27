@@ -1,14 +1,13 @@
-import Document, {Head, Html, Main, NextScript} from "next/document";
+import Document, { Head, Html, Main, NextScript } from "next/document";
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html>
-        <Head>
-          <link rel="shortcut icon" href="/favicon.ico" />
-        </Head>
+      <Html lang={"en"}>
+        <Head />
+
         <body>
-            <Main />
+          <Main />
           <NextScript />
         </body>
       </Html>

@@ -22,6 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           href={"/favicon.png"}
           type={"image/png"}
         />
+        <meta name={"description"} content={`Resume of Adem UYSAL`} />
       </Head>
 
       <Component {...pageProps} />

@@ -32,10 +32,14 @@ Replace the content of this files:
     public/
     |—— adem-uysal-cv.pdf // Replace this pdf, use simple name
     |—— favicon.ico // Replace this favicon if you want
+    |—— manifest.json // Replace with your information
 
     components/
     ├── Desktop
     │   ├── Desktop.tsx // Replace "adem-uysal-cv.pdf" with your pdf name
+
+    pages/
+    ├── app.tsx // Edit title & description in head tag
 ```
 
 Run the project and check the result (OPTIONAL)
@@ -55,7 +59,6 @@ Star this repository if you like it. <br />
 
 Pull requests are welcome.
 
-
 ### Roadmap
 
 - [x] Add projects
@@ -65,7 +68,7 @@ Pull requests are welcome.
 - [x] Add favicon
 - [] Add dark mode
 - [] Add language support
-- [] In mobile, 100vh is not working because of addressbar. Fix.
+- [x] In mobile, 100vh is not working because of addressbar. Fix.
 - [] Add more animations
 - [] Drag & Drop Programs without using any library
 - [] Start Menu

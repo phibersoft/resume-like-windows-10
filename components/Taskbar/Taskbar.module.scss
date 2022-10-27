@@ -52,6 +52,10 @@
   &:not(:last-child) {
     margin-right: 3px;
   }
+
+  @media (max-width: 768px) {
+    padding: 0 7px;
+  }
 }
 
 .taskbarIcon {
