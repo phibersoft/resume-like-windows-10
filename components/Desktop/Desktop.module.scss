@@ -17,5 +17,9 @@
   height: 100%;
   max-width: 150px;
   padding: 20px;
+
+  @media (max-width: 768px) {
+    margin-left: 15px;
+  }
 }
 

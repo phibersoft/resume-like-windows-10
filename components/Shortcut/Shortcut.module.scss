@@ -1,3 +1,6 @@
+$icon-big: 32px;
+$icon-small: 24px;
+
 .main {
   display: flex;
   flex-direction: column;
@@ -9,7 +12,9 @@
   &:hover {
     color: #0064af;
 
-    svg, path, rect {
+    svg,
+    path,
+    rect {
       fill: #0064af;
     }
   }
@@ -17,13 +22,20 @@
 
 .icon {
   svg {
-    width: var(--shortcut-size);
-    height: var(--shortcut-size);
+    width: $icon-big;
+    height: $icon-big;
     fill: var(--shortcut-color) !important;
+
+    @media (max-width: 768px) {
+      width: $icon-small;
+      height: $icon-small;
+    }
   }
 
-  svg, path, rect {
-    transition: all .4s ease-in-out;
+  svg,
+  path,
+  rect {
+    transition: all 0.4s ease-in-out;
   }
 }
 
@@ -35,4 +47,8 @@
   letter-spacing: 0.5px;
   text-align: center;
   font-weight: lighter;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 }

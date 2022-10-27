@@ -83,4 +83,11 @@
   text-align: center;
   font-size: 14px;
   user-select: none;
+
+  @media (max-width: 768px) {
+    p:nth-child(2) {
+      // month day year
+      display: none;
+    }
+  }
 }

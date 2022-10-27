@@ -4,33 +4,16 @@ $border-radius: 6px;
   position: absolute;
   // center of the screen
   width: 60%;
-  min-width: 400px;
-  max-width: 800px;
-  height: auto;
+  height: 60%;
   background-color: black;
   top: 50%;
   left: 50%;
   border-radius: $border-radius;
   transform: translate(-50%, -50%);
-}
 
-.content {
-  padding: 10px 20px;
-  overflow-y: auto;
-  height: 100%;
-  max-height: var(--program-max-size);
-
-  &::-webkit-scrollbar {
-    width: 10px;
-    border: none;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #888;
+  @media (max-width: 768px) {
+    width: 90% !important;
+    height: 70%;
   }
 }
 
@@ -75,4 +58,25 @@ $border-radius: 6px;
 
 .dot:nth-child(2) {
   background-color: #ff0000;
+}
+
+.content {
+  padding: 10px 20px;
+  overflow-y: auto;
+  height: 100%;
+
+  max-height: calc(100% - 35px);
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    border: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
 }
