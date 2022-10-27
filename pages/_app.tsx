@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Adem UYSAL</title>
         <meta name={"viewport"} content={"width=1024"} />
+        <link rel={"manifest"} href={"/manifest.json"} />
         <link rel={"icon"} href={"/favicon.png"} type={"image/png"} />
         {/*   Shortcuts */}
         <link rel={"shortcut icon"} href={"/favicon.png"} type={"image/png"} />
