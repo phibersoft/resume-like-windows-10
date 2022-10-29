@@ -21,7 +21,7 @@ const PROJECTS_CONFIG: IProject[] = [
     description:
       "A remote controller for your computer. Control your computer with your phone.",
     technologies: ["Socket.io", "Node.js", "Kotlin", "RobotJS"],
-    githubLink: "https://github.com/phibersoft/remote-ph-android",
+    githubLink: "https://github.com/phibersoft/remote-controller-android",
     status: "development",
   },
   {
