@@ -48,3 +48,29 @@ main {
 a {
   color: #0294ff;
 }
+
+[data-tooltip] {
+  position: relative;
+
+  &:before {
+    content: attr(data-tooltip);
+    font-size: 12px;
+    position: absolute;
+    // to top of the element
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: rgba(#0294ff, 0.4);
+    padding: 5px;
+    border-radius: 6px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.6s;
+  }
+
+  &:hover:before {
+    visibility: visible;
+    opacity: 1;
+  }
+}

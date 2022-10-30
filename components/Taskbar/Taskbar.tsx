@@ -65,10 +65,10 @@ const Taskbar: FC = () => {
       </div>
       {/* Time and battery/wifi */}
       <div className={styles.statusBar}>
-        <TaskbarItem>
+        <TaskbarItem tooltip={"Comodo's Home"}>
           <WifiIcon />
         </TaskbarItem>
-        <TaskbarItem>
+        <TaskbarItem tooltip={"100%"}>
           <BatteryIcon />
         </TaskbarItem>
         <TaskbarItem>
@@ -84,8 +84,9 @@ const TaskbarItem: FC<
     onClick?: Function;
     programName?: string;
     active?: boolean;
+    tooltip?: string;
   }>
-> = ({ children, onClick, programName, active = false }) => {
+> = ({ children, onClick, programName, tooltip, active = false }) => {
   return (
     <div
       className={`${styles.taskbarItem} ${
@@ -95,6 +96,7 @@ const TaskbarItem: FC<
         e.preventDefault();
         onClick && onClick();
       }}
+      data-tooltip={tooltip || null}
     >
       <div className={styles.taskbarIcon}>{children}</div>
       {programName && (
