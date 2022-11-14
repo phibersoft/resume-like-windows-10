@@ -4,7 +4,7 @@ This is a resume template like Windows 10.
 
 ### Live Demo
 
-[Here is my resume.](https://adem-uysal-cv.vercel.app)
+[Here is my resume.](https://adem-uysal-resume.vercel.app)
 
 ### How to use
 
